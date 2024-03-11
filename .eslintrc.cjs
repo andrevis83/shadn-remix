@@ -34,6 +34,9 @@ module.exports = {
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
       ],
+      rules: {
+        'no-empty-pattern': "warn"
+      },
       settings: {
         react: {
           version: "detect",
@@ -58,8 +61,9 @@ module.exports = {
       plugins: ["@typescript-eslint", "import"],
       parser: "@typescript-eslint/parser",
       rules: {
-        "@typescript-eslint/no-unused-vars":
-          "warn",
+        "no-empty-pattern":"warn",
+        "@typescript-eslint/no-unused-vars":"warn",
+        "@typescript-eslint/ban-types": "warn",
       },
       settings: {
         "import/internal-regex": "^~/",

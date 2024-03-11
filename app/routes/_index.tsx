@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
+import Drawer from "~/components/Drawer";
+import AccordionDemo from "~/components/test";
 
 export const meta: MetaFunction = () => {
   return [
@@ -18,7 +20,8 @@ export default function Index() {
         lineHeight: "1.8",
       }}
     >
-      test
+      <Drawer />
+      <AccordionDemo />
     </div>
   );
 }
