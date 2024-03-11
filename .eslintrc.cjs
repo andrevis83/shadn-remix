@@ -41,7 +41,10 @@ module.exports = {
         formComponents: ["Form"],
         linkComponents: [
           { name: "Link", linkAttribute: "to" },
-          { name: "NavLink", linkAttribute: "to" },
+          {
+            name: "NavLink",
+            linkAttribute: "to",
+          },
         ],
         "import/resolver": {
           typescript: {},
@@ -54,6 +57,10 @@ module.exports = {
       files: ["**/*.{ts,tsx}"],
       plugins: ["@typescript-eslint", "import"],
       parser: "@typescript-eslint/parser",
+      rules: {
+        "@typescript-eslint/no-unused-vars":
+          "warn",
+      },
       settings: {
         "import/internal-regex": "^~/",
         "import/resolver": {
