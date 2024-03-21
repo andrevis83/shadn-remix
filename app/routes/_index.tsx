@@ -1,25 +1,11 @@
-import type { MetaFunction } from "@remix-run/node";
-import { Button } from "~/components/ui/button";
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: "New Remix App" },
-    {
-      name: "description",
-      content: "Welcome to Remix!",
-    },
-  ];
-};
+import { Link } from '@remix-run/react';
+import { Container } from '~/common/Container';
 
 export default function Index() {
   return (
-    <div
-      style={{
-        fontFamily: "system-ui, sans-serif",
-        lineHeight: "1.8",
-      }}
-    >
-      <Button>Click me</Button>
-    </div>
+    <Container maxWidth="md">
+      <Link to="/buttons">Buttons</Link>
+      <Link to="/layouts">Layouts</Link>
+    </Container>
   );
 }
