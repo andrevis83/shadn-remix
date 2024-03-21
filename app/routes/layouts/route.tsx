@@ -1,7 +1,7 @@
 import { Container } from '~/common/Container';
-import Containers from './Containers';
-import FlexJustify from './Flex.Justify';
-import FlexAlign from './Flex.Align';
+import ContainerSection from './Container/Containers';
+import FlexSections from './Flex';
+import GridSections from './Grid';
 
 export default function LayoutsPage() {
   return (
@@ -12,24 +12,11 @@ export default function LayoutsPage() {
       <p className="text-lg text-center mb-8">
         Ridimensiona la pagina per vederne gli effetti
       </p>
-      <section className="mt-20">
-        <h2 className="mt-4 mb-4 text-center leading-none text-3xl tracking-tight md:text-4xl lg:text-5xl">
-          Containers
-        </h2>
-        <Containers />
-      </section>
-      <section className="mt-20">
-        <h2 className="mt-4 mb-4 text-center leading-none text-3xl tracking-tight md:text-4xl lg:text-5xl">
-          Flex : align-items
-        </h2>
-        <FlexAlign />
-      </section>
-      <section className="mt-20">
-        <h2 className="mt-4 mb-4 text-center leading-none text-3xl tracking-tight md:text-4xl lg:text-5xl">
-          Flex : justify-content
-        </h2>
-        <FlexJustify />
-      </section>
+      <ContainerSection />
+      <Container maxWidth="sm">
+        <FlexSections />
+        <GridSections />
+      </Container>
     </Container>
   );
 }
