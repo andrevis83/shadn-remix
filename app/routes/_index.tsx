@@ -6,6 +6,7 @@ export default function Index() {
     <Container maxWidth="md">
       <Link to="/buttons">Buttons</Link>
       <Link to="/layouts">Layouts</Link>
+      <Link to="/surfaces">Surfaces</Link>
     </Container>
   );
 }

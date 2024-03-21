@@ -60,6 +60,7 @@ module.exports = {
       rules: {
         "@typescript-eslint/no-unused-vars":
           "warn",
+        "react/prop-types": "off"
       },
       settings: {
         "import/internal-regex": "^~/",
