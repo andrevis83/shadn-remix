@@ -1,7 +1,5 @@
+import { Outlet } from '@remix-run/react';
 import { Container } from '~/common/Container';
-import ContainerSection from './Container/Containers';
-import FlexSections from './Flex';
-import GridSections from './Grid';
 
 export default function LayoutsPage() {
   return (
@@ -12,11 +10,7 @@ export default function LayoutsPage() {
       <p className="text-lg text-center mb-8">
         Ridimensiona la pagina per vederne gli effetti
       </p>
-      <ContainerSection />
-      <Container maxWidth="sm">
-        <FlexSections />
-        <GridSections />
-      </Container>
+      <Outlet />
     </Container>
   );
 }

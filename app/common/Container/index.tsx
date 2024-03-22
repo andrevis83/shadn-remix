@@ -3,12 +3,14 @@ import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '~/lib/utils';
 
-interface ContainerProps
+export interface ContainerProps
   extends React.ButtonHTMLAttributes<HTMLDivElement>,
     VariantProps<typeof containerVariants> {
   asChild?: boolean;
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 }
+
+export type MaxWidth = ContainerProps['maxWidth'];
 
 export const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
   function Container(
