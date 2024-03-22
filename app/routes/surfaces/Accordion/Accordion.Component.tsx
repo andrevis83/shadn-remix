@@ -9,7 +9,9 @@ interface AccordionsProps {
   type?: 'single' | 'multiple';
 }
 
-export default function Accordions({ type = 'single' }: AccordionsProps) {
+export default function AccordionComponent({
+  type = 'single',
+}: AccordionsProps) {
   return (
     <>
       <Accordion type={type} collapsible={type === 'single'}>
