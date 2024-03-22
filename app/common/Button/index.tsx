@@ -39,19 +39,19 @@ export const buttonVariants = cva(
         lg: 'px-5 py-2 text-lg',
       },
       variant: {
-        default: 'hover:bg-accent hover:text-accent-foreground',
         error: 'bg-error text-error-foreground hover:bg-error/90',
         outline:
           'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
+        primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
         secondary:
           'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        contained: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        success: 'bg-success text-success-foreground hover:bg-error/90',
         link: 'text-primary underline-offset-4 hover:underline',
       },
     },
     defaultVariants: {
       size: 'md',
-      variant: 'default',
+      variant: 'primary',
     },
   }
 );
