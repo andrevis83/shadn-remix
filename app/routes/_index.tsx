@@ -1,4 +1,4 @@
-import { Link, Outlet } from '@remix-run/react';
+import { Link } from '@remix-run/react';
 import { Container } from '~/common/Container';
 
 export default function Index() {
@@ -6,7 +6,8 @@ export default function Index() {
     <Container maxWidth="md">
       <Link to="/buttons">Buttons</Link>
       <Link to="/layouts">Layouts</Link>
-      <Link to="/surfaces">Surfaces</Link>
+      <Link to="/accordion">Accordion</Link>
+      <Link to="/carousel">Carousel</Link>
     </Container>
   );
 }
