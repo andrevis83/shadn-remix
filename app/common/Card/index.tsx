@@ -1,15 +1,19 @@
 import Card from './Card';
-import CardHeader from './Card.Header';
-import CardTitle from './Card.Title';
-import CardDescription from './Card.Description';
 import CardContent from './Card.Content';
+import CardDescription from './Card.Description';
 import CardFooter from './Card.Footer';
+import CardHeader from './Card.Header';
+import CardImage from './Card.Image';
+import CardMedia from './Card.Media';
+import CardTitle from './Card.Title';
 
 export {
   Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardDescription,
   CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardImage,
+  CardMedia,
+  CardTitle,
 };

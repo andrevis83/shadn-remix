@@ -1,15 +1,21 @@
 import React from 'react';
+import { Slot } from '@radix-ui/react-slot';
 import { cn } from '~/lib/utils';
 
-const CardContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(function CardContent({ children, className, ...props }, ref) {
-  return (
-    <div ref={ref} className={cn('p-6 pt-0', className)} {...props}>
-      {children}
-    </div>
-  );
-});
+export interface CardContentProps extends React.HTMLAttributes<HTMLDivElement> {
+  asChild?: boolean;
+}
+
+const CardContent = React.forwardRef<HTMLDivElement, CardContentProps>(
+  function CardContent({ asChild, children, className, ...props }, ref) {
+    const Comp = asChild ? Slot : 'section';
+
+    return (
+      <Comp ref={ref} className={cn('p-6', className)} {...props}>
+        {children}
+      </Comp>
+    );
+  }
+);
 
 export default CardContent;

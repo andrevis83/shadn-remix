@@ -14,7 +14,7 @@ export default function AccordionComponent({
 }: AccordionsProps) {
   return (
     <>
-      <Accordion type={type} collapsible={type === 'single'}>
+      <Accordion type={type}>
         <AccordionItem value="item-1">
           <AccordionTrigger>Is it accessible?</AccordionTrigger>
           <AccordionContent>
