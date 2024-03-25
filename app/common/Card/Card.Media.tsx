@@ -9,7 +9,11 @@ const CardMedia = forwardRef<HTMLDivElement, CardMediaProps>(function CardMedia(
   ref
 ) {
   return (
-    <figure ref={ref} className={cn('w-full h-auto', className)} {...props}>
+    <figure
+      ref={ref}
+      className={cn('h-auto max-w-full ', className)}
+      {...props}
+    >
       <>{children}</>
     </figure>
   );

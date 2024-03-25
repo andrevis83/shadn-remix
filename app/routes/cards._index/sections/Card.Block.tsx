@@ -8,14 +8,13 @@ import {
   CardMedia,
   CardTitle,
 } from '~/common/Card';
-import { Container } from '~/common/Container';
 
-export default function CardPage() {
+export default function CardBlock() {
   return (
-    <Container className="pb-4" maxWidth="sm">
-      <h1 className="mt-4 mb-4 text-center leading-none text-4xl tracking-tight md:text-5xl lg:text-6xl">
-        Pagina delle card
-      </h1>
+    <div className="mt-12 mb-4">
+      <h2 className="text-center leading-none text-3xl tracking-tight md:text-4xl lg:text-5xl">
+        Card (default)
+      </h2>
       <Card>
         <CardHeader>
           <CardTitle>Card Title</CardTitle>
@@ -34,6 +33,6 @@ export default function CardPage() {
           <p>Card Footer</p>
         </CardFooter>
       </Card>
-    </Container>
+    </div>
   );
 }
